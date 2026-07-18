@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+</head>
+<body>
+    <p id="rice"></p>
+    <p id ="sugar"></p>
+    <p id = "wheat"></p>
+    <p id="total"></p>
+    <p id="updatedtotal"></p>
+     <script language = "javascript" type = "text/javascript">
+     let ricequantity = 10;
+     let sugarquantity = 5;
+     let wheatquantity = 8;
+     let rice = 50;
+     let sugar = 30;
+     let wheat = 40;
+     let x = rice * ricequantity;
+     let y = sugar * sugarquantity;
+     let z = wheat * wheatquantity;
+     let price =  x + y + z + "  is the total" ;
+     document.getElementById("rice").innerHTML=x;
+    console.log("cost of rice = "+ x);
+    document.getElementById("sugar").innerHTML=y;
+    console.log("cost of sugar ="+ y);
+    document.getElementById("wheat").innerHTML=z;
+    console.log("cost of wheat ="+ z);
+    document.getElementById("total").innerHTML=price;
+    console.log("total is  ="+ price);
+    ricequantity = 15;
+    x = rice * ricequantity;
+    price = x + y + z + "is the updated price";
+    console.log("updated total price ="+ price);
+    document.getElementById("updatedtotal").innerHTML=price;
+
+     </script>
+</body>
+</html>
