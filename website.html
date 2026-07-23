@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback Form</title>
+</head>
+<body>
+    <script>
+        var feedback ="  I loved the food and service! ";
+        function cleanfeedback(text){
+            text=text.trim();
+            text=text.toLowerCase();
+            text=text.replace("food","ambience");
+            console.log("feedback",text);
+            var position = text.indexOf("service");
+           console.log("position of service",position);
+            var word = text.split(" ");
+            console.log("array of words",word);
+            
+        }
+        cleanfeedback(feedback);
+    </script>
+    
+</body>
+</html>
