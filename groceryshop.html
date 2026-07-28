@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+</head>
+
+<body>
+    <script>
+var productNames = ["Apple", "Banana", "Mango", "Grapes", "Orange"];
+var productPrices = [50, 30, 90, 45, 70];
+ 
+
+var productList = productNames.map(function (name, index) {
+  return "Product: " + name + " - Price: " + productPrices[index];
+});
+ 
+
+console.log("All Products");
+productList.forEach(function (item) {
+  console.log(item);
+});
+ 
+
+var productObjects = productNames.map(function (name, index) {
+  return { name: name, price: productPrices[index] };
+});
+ 
+var expensiveProducts = productObjects.filter(function (product) {
+  return product.price > 50;
+});
+ 
+console.log("");
+console.log(" Products with Price Greater Than 50 ");
+expensiveProducts.forEach(function (product) {
+  console.log("Product: " + product.name + " - Price: " + product.price);
+});
+ 
+
+productNames.push("Watermelon");
+productPrices.push(80);
+ 
+var updatedProductList = productNames.map(function (name, index) {
+  return "Product: " + name + " - Price: " + productPrices[index];
+});
+ 
+console.log("");
+console.log("Updated Product List ");
+updatedProductList.forEach(function (item) {
+  console.log(item);
+});
+ 
+
+var updatedProductObjects = productNames.map(function (name, index) {
+  return { name: name, price: productPrices[index] };
+});
+ 
+var sortedByPrice = updatedProductObjects.sort(function (firstProduct, secondProduct) {
+  return firstProduct.price - secondProduct.price;
+});
+ 
+console.log("");
+console.log("Products price from high to low");
+sortedByPrice.forEach(function (product) {
+  console.log("Product: " + product.name + " - Price: " + product.price);
+});
+
+
+
+    </script>
+</body>
+</html>
