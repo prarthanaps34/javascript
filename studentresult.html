@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT RESULT DASHBOARD</title>
+</head>
+<body>
+    <script>
+     let students = [
+  { name: "Anu", score: 45 },
+  { name: "tom", score: 72 },
+  { name: "Ammu", score: 91 },
+  { name: "Diya", score: 30 },
+  { name: "john", score: 65 },
+  { name: "priya", score: 88 }
+];
+let studentnames= students.map(function(student){
+    return student.name;
+})
+console.log("ALL STUDENTS");
+studentnames.forEach(function(name){
+    console.log(name);
+    
+});
+let toppers = students
+.filter(
+    function(student){
+        return student.score > 60;
+    }
+)
+.map(function(student){
+    return student.name;
+});
+console.log("");
+console.log("Students Who Scored More Than 60");
+toppers.forEach(function (name) {
+  console.log(name);
+});
+let totalScore = students.reduce(function (sum, student) {
+  return sum + student.score;
+}, 0);
+ 
+console.log("");
+console.log("Total Score of All Students");
+console.log(totalScore);
+ 
+
+let allPassed = students.every(function (student) {
+  return student.score > 35;
+});
+ 
+console.log("");
+console.log("Did All Students Pass?");
+console.log(allPassed);
+ 
+let hasTopScorer = students.some(function (student) {
+  return student.score > 90;
+});
+ 
+console.log("");
+console.log(" Did At Least One Student Score More Than 90?");
+console.log(hasTopScorer);
+ 
+let sortedStudents = students.slice().sort(function (firstStudent, secondStudent) {
+  return secondStudent.score - firstStudent.score;
+});
+ 
+console.log("");
+console.log("Students Sorted By Score (High to Low)");
+sortedStudents.forEach(function (student) {
+  console.log("Name: " + student.name + " - Score: " + student.score);
+});
+
+
+    
+
+
+
+
+    </script>
+</body>
+</html>
