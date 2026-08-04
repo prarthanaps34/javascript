@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Info</title>
+</head>
+<body>
+ <script>
+    class Books{
+        constructor(booktitle,author,price){
+            this.booktitle = booktitle;
+            this.author = author;
+            this.price = price;
+
+        }
+        getTitle(){
+            return this.booktitle;
+        }
+        getAuthor(){
+            return this.author;
+        }
+        
+        setPrice(newPrice){
+            if (typeof newPrice ==="number"&& newPrice >0){
+                this.price = newPrice;
+            }
+            else{
+                console.log("invalid!!.Price must be greater than 0");
+                
+            }
+        }
+    }
+    const book1 =new Books("THE PRAGMATIC PROGRAMMER","David Thomas",450);
+    book1.setPrice(1000);
+    book1.setPrice(true);
+    book1.setPrice("450");
+    book1.setPrice(400);
+    console.log("Book title",book1.getTitle());
+    console.log("Author",book1.getAuthor());
+    console.log("price",book1.price);
+    
+    
+
+ </script>  
+</body>
+</html>
