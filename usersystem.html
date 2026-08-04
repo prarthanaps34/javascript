@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User system</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name,age,email){
+                this.name = name;
+                this.age = age;
+                this.email = email;
+
+            }
+            getName(){
+                return this.name;
+            }
+            getAge(){
+                return this.age;
+            }
+        
+        setEmail(newEmail){
+            if(newEmail.includes("@")){
+                this.email=newEmail;
+            }else{
+                console.log("invalid E-mail ID");
+
+            }
+            
+                
+            }
+        }
+        const user1 = new User("karunya",22,"karunya@123gmail.com");
+        user1.setEmail("karunya123.com");
+        user1.setEmail("karunya@gmail.com");
+        user1.setEmail("karunya@12gmail.com");
+
+console.log("Name:", user1.getName());
+console.log("Age:", user1.getAge());
+console.log("Email:", user1.email);
+    </script>
+</body>
+</html>
